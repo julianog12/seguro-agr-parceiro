@@ -1,0 +1,22 @@
+{
+  "name": "seguro_partner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianog12/seguro-agr-parceiro.git"
+  },
+  "author": "BBiazin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianog12/seguro-agr-parceiro/issues"
+  },
+  "homepage": "https://github.com/julianog12/seguro-agr-parceiro#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
