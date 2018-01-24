@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "scripts": {        
+        "start": "nf start"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/julianog12/seguro-agr-parceiro.git"
@@ -18,6 +21,6 @@
         "utf8": "^3.0.0"
     },
     "engines": {
-        "node": "6.11.4"
+        "node": "6.2.0"
     }
 }
