@@ -3,10 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nf start"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/julianog12/seguro-agr-parceiro.git"
