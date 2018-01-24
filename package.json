@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/julianog12/seguro-agr-parceiro#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "utf8": "^3.0.0"
   }
 }

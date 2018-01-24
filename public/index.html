@@ -9,6 +9,7 @@
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
 
     <body ng-controller="mainController">
@@ -25,7 +26,7 @@
                     <div class="card-tabs">
                         <ul class="tabs tabs-fixed-width">
                             <li class="tab">
-                                <a class="active" href="#tabPrincipal">O que È o SeguroAgro?</a>
+                                <a class="active" href="#tabPrincipal">O que √© o SeguroAgro?</a>
                             </li>
                             <li class="tab">
                                 <a href="#tabSecundaria">Quero ser um parceiro</a>
@@ -37,19 +38,19 @@
                         <div id="tabPrincipal">
                             <div class="row">
                                 <div class="col s12">                                    
-                                    <p class="justified-text">O seguroagro.com.br È uma ferramenta criada com objetivo encurtar o caminho entre o produtor rural, cooperativas, revenda de insumos, cooperativas de crÈdito, bancos, corretores de seguros e assistÍncia tÈcnica, que desejam e tem a necessidade proteger suas lavouras, dÈbitos de insumos e/ou financiamentos de eventos clim·ticos adversos e as seguradoras que possuem e disponibilizam produtos que atendem essa demanda</p>
+                                    <p class="justified-text">O seguroagro.com.br √© uma ferramenta criada com objetivo encurtar o caminho entre o produtor rural, cooperativas, revenda de insumos, cooperativas de cr√©dito, bancos, corretores de seguros e assist√™ncia t√©cnica, que desejam e tem a necessidade proteger suas lavouras, d√©bitos de insumos e/ou financiamentos de eventos clim√°ticos adversos e as seguradoras que possuem e disponibilizam produtos que atendem essa demanda</p>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col s12">   
-                                    <p class="justified-text">Foi desenvolvida visando ser o mais simples e eficiente possÌvel, com ele o usu·rio tem acesso a todas as etapas do processo de contrataÁ„o, comunicaÁ„o e acompanhamento de sinistros e indenizaÁıes do seguro agrÌcola de maneira r·pida e ·gil.</p>
+                                    <p class="justified-text">Foi desenvolvida visando ser o mais simples e eficiente poss√≠vel, com ele o usu√°rio tem acesso a todas as etapas do processo de contrata√ß√£o, comunica√ß√£o e acompanhamento de sinistros e indeniza√ß√µes do seguro agr√≠cola de maneira r√°pida e √°gil.</p>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col s12">   
-                                    <p>Clique na aba <b>"Quero ser um parceiro"</b> e faÁa a solicitaÁ„o de cadastro de parceiro, ou entre em contato conosco e saiba mais!</p>
+                                    <p>Clique na aba <b>"Quero ser um parceiro"</b> e fa√ßa a solicita√ß√£o de cadastro de parceiro, ou entre em contato conosco e saiba mais!</p>
                                 </div>
                             </div>
 
@@ -58,7 +59,7 @@
                                     <p><i class="material-icons tiny">mail</i> seguroagro@dealcorp.com.br</p>                                    
                                     <p><i class="material-icons tiny">phone</i> (44) 3020-2021</p>
                                     <p><i class="material-icons tiny">phone_iphone</i> (44) 99928-2057</p>
-                                    <p><i class="material-icons tiny">place</i>EndereÁo da corretora</p>
+                                    <p><i class="material-icons tiny">place</i>Endere√ßo da corretora</p>
                                 </div>
                             </div>
                         </div>
@@ -96,11 +97,11 @@
                             <div class="row">                            
                                 <div class="input-field col s6">
                                     <select ng-model="tp_empresa" name="atuacao" required>
-                                        <option value="" disabled selected>Escolhe sua atuaÁ„o</option>
+                                        <option value="" disabled selected>Escolhe sua atua√ß√£o</option>
                                         <option value="1">Cooperativa</option>
                                         <option value="2">Revenda de insumos</option>
-                                        <option value="3">AgrÙnomo autÙnomo</option>
-                                        <option value="4">EscritÛrio de planejamento agropecu·rio</option>
+                                        <option value="3">Agr√¥nomo aut√¥nomo</option>
+                                        <option value="4">Escrit√≥rio de planejamento agropecu√°rio</option>
                                         <option value="5">Corretor</option>
                                         <option value="6">Seguradora</option>
                                         <option value="7">Produtor rural</option>
@@ -111,7 +112,7 @@
 
                                 <div class="input-field col s6">
                                     <input id="regiao" name="regiao" type="text" class="validate" ng-model="ds_regiao_atuacao" required>
-                                    <label for="regiao">Regi„o de atuaÁ„o</label>
+                                    <label for="regiao">Regi√£o de atua√ß√£o</label>
                                 </div>
                             </div>
 
@@ -120,7 +121,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <textarea id="observacoes" name="observacao" class="materialize-textarea" ng-model="ds_observacao"></textarea>
-                                            <label for="observacoes">ObservaÁıes</label>
+                                            <label for="observacoes">Observa√ß√µes</label>
                                         </div>
                                     </div>
                                 </div>
@@ -144,39 +145,39 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
-            $(document).ready(function () {
-                $('select').material_select();
-            });
+                                                        $(document).ready(function () {
+                                                            $('select').material_select();
+                                                        });
 
-            angular.module('app', [])
-                    .controller('mainController', function ($scope, $http) {
-                        $scope.cadastrarParceiro = function () {
-                            var apiUrl = "http://localhost:3000/parceiros";
-                            var data = {
-                                nm_parceiro: $scope.nm_parceiro,
-                                nr_cpfcgc: $scope.nr_cpfcgc,
-                                cd_ddd: $scope.cd_ddd,
-                                nr_telefone: $scope.nr_telefone,
-                                ds_email: $scope.ds_email,
-                                ds_regiao_atuacao: $scope.ds_regiao_atuacao,
-                                tp_empresa: $scope.tp_empresa
-                            };
+                                                        angular.module('app', [])
+                                                                .controller('mainController', function ($scope, $http) {
+                                                                    $scope.cadastrarParceiro = function () {
+                                                                        var apiUrl = "http://localhost:3000/parceiros";
+                                                                        var data = {
+                                                                            nm_parceiro: $scope.nm_parceiro,
+                                                                            nr_cpfcgc: $scope.nr_cpfcgc,
+                                                                            cd_ddd: $scope.cd_ddd,
+                                                                            nr_telefone: $scope.nr_telefone,
+                                                                            ds_email: $scope.ds_email,
+                                                                            ds_regiao_atuacao: $scope.ds_regiao_atuacao,
+                                                                            tp_empresa: $scope.tp_empresa
+                                                                        };
 
-                            $http.post(apiUrl, data).then(function () {
-                                delete $scope.nm_parceiro;
-                                delete $scope.nr_cpfcgc;
-                                delete $scope.cd_ddd;
-                                delete $scope.nr_telefone;
-                                delete $scope.ds_email;
-                                delete $scope.ds_regiao_atuacao;
-                                delete $scope.tp_empresa
+                                                                        $http.post(apiUrl, data).then(function () {
+                                                                            delete $scope.nm_parceiro;
+                                                                            delete $scope.nr_cpfcgc;
+                                                                            delete $scope.cd_ddd;
+                                                                            delete $scope.nr_telefone;
+                                                                            delete $scope.ds_email;
+                                                                            delete $scope.ds_regiao_atuacao;
+                                                                            delete $scope.tp_empresa
 
-                                alert("SolicitaÁ„o enviada com sucesso");
-                            }, function () {
-                                alert("Falha ao enviar solicitaÁ„o");
-                            });
-                        };
-                    });
+                                                                            alert("Solicita√ß√£o enviada com sucesso");
+                                                                        }, function () {
+                                                                            alert("Falha ao enviar solicita√ß√£o");
+                                                                        });
+                                                                    };
+                                                                });
         </script>
     </body>
 </html>
