@@ -14,10 +14,10 @@
     },
     "homepage": "https://github.com/julianog12/seguro-agr-parceiro#readme",
     "dependencies": {
-        "express": "^4.16.2"
+        "express": "^4.16.2",
+        "utf8": "^3.0.0"
     },
     "engines": {
-        "node": "5.0.0",
-        "npm": "4.6.1"
+        "node": "6.11.4"
     }
 }
