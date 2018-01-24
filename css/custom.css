@@ -1,0 +1,16 @@
+body {
+    background: url(../imgs/bg.jpg);    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    background: url(../imgs/logo_50.png) no-repeat center;
+    display: block;
+    height: 191px;
+    width: 100%;
+}
+
+.justified-text {
+    text-align: justify;
+}

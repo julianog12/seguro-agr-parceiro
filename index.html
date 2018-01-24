@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/custom.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body ng-controller="mainController">
+        <div class="row">
+            <div class="col s12 center-align">
+                <span id="logo"></span>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <form class="col s12 m6 offset-m3" ng-submit="cadastrarParceiro()">
+                <div class="card">
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width">
+                            <li class="tab">
+                                <a class="active" href="#tabPrincipal">O que é o SeguroAgro?</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tabSecundaria">Quero ser um parceiro</a>
+                            </li>                            
+                        </ul>
+                    </div>
+
+                    <div class="card-content">                        
+                        <div id="tabPrincipal">
+                            <div class="row">
+                                <div class="col s12">                                    
+                                    <p class="justified-text">O seguroagro.com.br é uma ferramenta criada com objetivo encurtar o caminho entre o produtor rural, cooperativas, revenda de insumos, cooperativas de crédito, bancos, corretores de seguros e assistência técnica, que desejam e tem a necessidade proteger suas lavouras, débitos de insumos e/ou financiamentos de eventos climáticos adversos e as seguradoras que possuem e disponibilizam produtos que atendem essa demanda</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12">   
+                                    <p class="justified-text">Foi desenvolvida visando ser o mais simples e eficiente possível, com ele o usuário tem acesso a todas as etapas do processo de contratação, comunicação e acompanhamento de sinistros e indenizações do seguro agrícola de maneira rápida e ágil.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12">   
+                                    <p>Clique na aba <b>"Quero ser um parceiro"</b> e faça a solicitação de cadastro de parceiro, ou entre em contato conosco e saiba mais!</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12">   
+                                    <p><i class="material-icons tiny">mail</i> seguroagro@dealcorp.com.br</p>                                    
+                                    <p><i class="material-icons tiny">phone</i> (44) 3020-2021</p>
+                                    <p><i class="material-icons tiny">phone_iphone</i> (44) 99928-2057</p>
+                                    <p><i class="material-icons tiny">place</i>Endereço da corretora</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tabSecundaria">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="nome_completo" name="nome_completo" type="text" class="validate" ng-model="nm_parceiro" required>
+                                    <label for="nome_completo">Nome completo</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <input id="cpf_cnpj" name="cpf_cnpj" type="text" class="validate" ng-model="nr_cpfcgc" required>
+                                    <label for="cpf_cnpj">CPF/CNPJ</label>
+                                </div>                            
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s1">
+                                    <input id="cd_ddd" name="cd_ddd" type="text" maxlength="2" class="validate" ng-model="cd_ddd" required>
+                                    <label for="cd_ddd">DDD</label>
+                                </div>
+
+                                <div class="input-field col s3">
+                                    <input id="telefone" name="telefone" type="text" class="validate" ng-model="nr_telefone" required>
+                                    <label for="telefone" >Telefone</label>
+                                </div>
+
+                                <div class="input-field col s8">
+                                    <input id="email" name="email" type="email" class="validate" ng-model="ds_email" required>
+                                    <label for="email" >Email</label>
+                                </div>
+                            </div>
+
+                            <div class="row">                            
+                                <div class="input-field col s6">
+                                    <select ng-model="tp_empresa" name="atuacao" required>
+                                        <option value="" disabled selected>Escolhe sua atuação</option>
+                                        <option value="1">Cooperativa</option>
+                                        <option value="2">Revenda de insumos</option>
+                                        <option value="3">Agrônomo autônomo</option>
+                                        <option value="4">Escritório de planejamento agropecuário</option>
+                                        <option value="5">Corretor</option>
+                                        <option value="6">Seguradora</option>
+                                        <option value="7">Produtor rural</option>
+                                        <option value="8">Outros</option>                                    
+                                    </select>
+                                    <label>Sou</label>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <input id="regiao" name="regiao" type="text" class="validate" ng-model="ds_regiao_atuacao" required>
+                                    <label for="regiao">Região de atuação</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="observacoes" name="observacao" class="materialize-textarea" ng-model="ds_observacao"></textarea>
+                                            <label for="observacoes">Observações</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Solicitar cadastro
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+                                                        $(document).ready(function () {
+                                                            $('select').material_select();
+                                                        });
+
+                                                        angular.module('app', [])
+                                                                .controller('mainController', function ($scope, $http) {
+                                                                    $scope.cadastrarParceiro = function () {
+                                                                        var apiUrl = "http://localhost:3000/parceiros";
+                                                                        var data = {
+                                                                            nm_parceiro: $scope.nm_parceiro,
+                                                                            nr_cpfcgc: $scope.nr_cpfcgc,
+                                                                            cd_ddd: $scope.cd_ddd,
+                                                                            nr_telefone: $scope.nr_telefone,
+                                                                            ds_email: $scope.ds_email,
+                                                                            ds_regiao_atuacao: $scope.ds_regiao_atuacao,
+                                                                            tp_empresa: $scope.tp_empresa
+                                                                        };
+
+                                                                        $http.post(apiUrl, data).then(function () {
+                                                                            delete $scope.nm_parceiro;
+                                                                            delete $scope.nr_cpfcgc;
+                                                                            delete $scope.cd_ddd;
+                                                                            delete $scope.nr_telefone;
+                                                                            delete $scope.ds_email;
+                                                                            delete $scope.ds_regiao_atuacao;
+                                                                            delete $scope.tp_empresa;
+                                                                            
+                                                                            alert("Solicitação enviada com sucesso");
+                                                                        }, function () {
+                                                                            alert("Falha ao enviar solicitação");
+                                                                        });
+                                                                    };
+                                                                });
+        </script>
+    </body>
+</html>
